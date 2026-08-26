@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registration Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🎓 Registration Assistant</h1>
+
+        <p class="subtitle">
+            Your assistant for course registration and eligibility
+        </p>
+
+        <!-- Chatbot Section -->
+        <div class="chat-box">
+
+            <div id="chatMessages">
+                <div class="bot-message">
+                    Hello! 👋 I am your Registration Assistant.
+                    <br><br>
+                    I can help you with:
+                    <br>📚 Available courses
+                    <br>✅ Eligibility checking
+                    <br>📝 Registration guidance
+                </div>
+            </div>
+
+            <div class="input-area">
+                <input
+                    type="text"
+                    id="userInput"
+                    placeholder="Ask me something..."
+                >
+
+                <button onclick="sendMessage()">Send</button>
+            </div>
+
+        </div>
+
+
+        <!-- Eligibility Section -->
+        <div class="card">
+
+            <h2>✅ Check Course Eligibility</h2>
+
+            <label>Student Name</label>
+
+            <input
+                type="text"
+                id="studentName"
+                placeholder="Enter your name"
+            >
+
+            <label>Select Course</label>
+
+            <select id="course">
+                <option value="">Select a course</option>
+                <option value="Data Science">Data Science</option>
+                <option value="Python Programming">Python Programming</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Artificial Intelligence">Artificial Intelligence</option>
+            </select>
+
+            <label>Previous Semester Percentage</label>
+
+            <input
+                type="number"
+                id="percentage"
+                placeholder="Enter percentage"
+            >
+
+            <button onclick="checkEligibility()">
+                Check Eligibility
+            </button>
+
+            <div id="eligibilityResult"></div>
+
+        </div>
+
+
+        <!-- Registration Guidance -->
+        <div class="card">
+
+            <h2>📋 Registration Guidance</h2>
+
+            <p>1️⃣ Select the course you want to study.</p>
+
+            <p>2️⃣ Check your eligibility.</p>
+
+            <p>3️⃣ Enter your student information.</p>
+
+            <p>4️⃣ Submit the registration form.</p>
+
+            <p>5️⃣ Wait for registration confirmation.</p>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
